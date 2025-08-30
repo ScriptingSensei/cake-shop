@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Options</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .payment-option {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    position: relative;
+    flex: 1; /* Equal width for all payment options */
+    max-width: 300px; /* Increase max-width for better layout */
+  }
+  
+  .payment-option:hover {
+    transform: translateY(-10px) scale(1.05); /* Add scale effect on hover */
+  }
+  
+  .payment-option img {
+    max-width: 150px; /* Increase max-width for larger images */
+    margin-bottom: 20px; /* Increase margin */
+  }
+  
+  .payment-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Corrected padding */
+    font-size: 18px; /* Increase font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.payment-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+  .payment-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Additional styles for better visual appearance */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+</style>
+</head>
+<body>
+
+<h1>Select a Payment Option</h1>
+
+<div class="payment-options">
+  <div class="payment-option">
+    <img src="images/card.png" alt="Credit/Debit Card">
+    <p>Credit/Debit Card</p>
+    <a href="card.html" class="payment-button">Pay with Card</a>
+  </div>
+  <div class="payment-option">
+    <img src="images/google pay.png" alt="Google Pay">
+    <p>Google Pay</p>
+    <a href="barcode.html" class="payment-button">Pay with Google Pay</a>
+  </div>
+  <div class="payment-option">
+    <img src="images/cash on delivery.png" alt="Cash on Delivery">
+    <p>Cash on Delivery</p>
+    <a href="thankyou1.html" class="payment-button">Pay Cash on Delivery</a>
+  </div>
+</div>
+
+
+</body>
+</html>

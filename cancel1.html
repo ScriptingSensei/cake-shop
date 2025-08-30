@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Order</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #f2f2f2;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .reason-options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .reason-option {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            color: #444;
+        }
+        .reason-option input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #d32f2f;
+        }
+        .success-message {
+            color: #4CAF50;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .btn-yes {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn-yes:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancel Order</h1>
+        <form id="cancelForm">
+            <p>Please select a reason for cancelling your order:</p>
+            <div class="reason-options">
+                <div class="reason-option">
+                    <input type="radio" id="changeOfMind" name="reason" value="Change of mind">
+                    <label for="changeOfMind">Change of mind</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="priceDiscrepancy" name="reason" value="Price discrepancy">
+                    <label for="priceDiscrepancy">Price discrepancy</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="delayedShipping" name="reason" value="Delayed shipping">
+                    <label for="delayedShipping">Delayed shipping</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="incorrectItem" name="reason" value="Incorrect item">
+                    <label for="incorrectItem">Incorrect item</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="financialReasons" name="reason" value="Financial reasons">
+                    <label for="financialReasons">Financial reasons</label>
+                </div>
+            </div>
+            <input type="submit" value="Cancel Order">
+        </form>
+        <div id="successMessage" class="success-message" style="display: none;">
+            <p>Order cancelled</p>
+            <button class="btn-yes" onclick="orderAgain()">Ok</button>
+            <p>Order from us again to experience great products and services!</p>
+        </div>
+    </div>
+
+    <script>
+        function orderAgain() {
+            alert("Order again from us.");
+        }
+
+        document.getElementById("cancelForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var successMessage = document.getElementById("successMessage");
+            successMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Blogs</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+
+  .blog-card {
+    background-color: #bc7878;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 40px);
+    max-width: 400px;
+    height: 1400px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    margin-bottom: 40px; /* Added */
+  }
+
+  .blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .blog-card:hover::before {
+    opacity: 1;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .blog-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .blog-card .content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    flex-grow: 1; /* Added */
+  }
+
+  .blog-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+    margin-bottom: 10px;
+  }
+
+  .blog-card:hover h2 {
+    color: #810606;
+  }
+
+  .blog-card h3 {
+    font-size: 16px;
+    color: #eee;
+    margin-bottom: 20px;
+  }
+
+  .blog-card p {
+    line-height: 1.6;
+    color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<div class="blog-card">
+  <img src="images/jacob-schwartz-enVg_Vtsw1c-unsplash.jpg" alt="Blog Image 1">
+  <div class="content">
+    <h2>Black Forest Cake</h2>
+    <h3>In Decadence: The Art of Crafting the Perfect Black Forest Cake</h3>
+    <p>Welcome to our blog dedicated to one of the most iconic and indulgent desserts of all time – the Black Forest Cake. Dive into the world of rich chocolate, luscious whipped cream, and tart cherries as we explore the history, variations, and secrets behind this classic confection.</p>
+    <p>Originating from the picturesque Black Forest region of Germany, this heavenly dessert has captured the hearts and taste buds of dessert lovers worldwide. Our blog delves into the fascinating history of the Black Forest Cake, tracing its roots back to its humble beginnings and its evolution into the decadent masterpiece we know today.</p>
+    <p>But our exploration doesn't stop there. We'll guide you through the intricacies of crafting the perfect Black Forest Cake in your own kitchen. From selecting the finest ingredients to mastering the art of layering and decorating, we'll share tips, tricks, and recipes to help you create a show-stopping dessert that will impress even the most discerning palates.</p>
+    <p>Join us on a journey through the tantalizing world of Black Forest Cake. Whether you're a seasoned baker looking to perfect your technique or a novice eager to try your hand at something new, our blog promises to inspire and delight. Get ready to indulge your senses and unleash your inner pastry chef as we explore the magic of the Black Forest Cake together.</p>
+    <p>Prepare to tempt your taste buds and elevate your baking skills to new heights with our comprehensive guide to the ultimate indulgence – the Black Forest Cake. Let's embark on this sweet adventure together!</p>
+  </div>
+</div>
+
+<div class="blog-card">
+  <img src="images/michaela-baum-VnM6_liIRJ0-unsplash.jpg" alt="Blog Image 2">
+  <div class="content">
+    <h2>Chocolate cupcake</h2>
+    <h3>Decadent Delights: Exploring the World of Chocolate Cupcakes</h3>
+    <p>Welcome to our delightful corner of the internet, where we celebrate all things chocolate cupcakes! Indulge your sweet tooth and embark on a journey through a world of rich cocoa, fluffy cake, and luscious frosting as we dive into the delicious realm of chocolate cupcakes.</p>
+    <p>In our blog, we're passionate about sharing the joy and magic of baking, and what better way to do so than with everyone's favorite treat – chocolate cupcakes! Whether you're a seasoned baker or a kitchen novice, our blog has something for everyone. From classic recipes passed down through generations to innovative twists on the traditional cupcake, we'll guide you through every step of the baking process with easy-to-follow instructions and helpful tips.</P>
+    <P>But our blog is more than just recipes. We'll take you behind the scenes to explore the fascinating history of chocolate cupcakes, tracing their origins back to ancient civilizations and their journey to becoming a beloved dessert staple. Discover the stories and anecdotes behind your favorite treats as we delve into the cultural significance of chocolate cupcakes around the world.</P>
+    <p>And let's not forget about the fun part – decorating! Get inspired with creative ideas for frosting, toppings, and presentation techniques that will elevate your chocolate cupcakes from delicious to downright irresistible. Whether you're hosting a birthday party, a bake sale, or simply treating yourself to a well-deserved indulgence, we'll help you make every batch of cupcakes a work of edible art.</P>
+    <p>So come along and join us on a mouthwatering adventure as we explore the wonderful world of chocolate cupcakes.</p>
+  </div>
+</div>
+
+<div class="blog-card">
+  <img src="images/olenka-kotyk-9x-PwjxC0Z8-unsplash.jpg" alt="Blog Image 3">
+  <div class="content">
+    <h2>4 Layers Cake with Wine</h2>
+    <h3>In Opulence: The Epicurean Journey of Raspberry Chocolate Wine Cake</h3>
+    <p>Welcome to our luxurious haven, where culinary decadence meets refined palates – welcome to the world of the 4-layered Raspberry Chocolate Wine Cake blog. Prepare to tantalize your taste buds and elevate your dessert experience as we embark on a sumptuous journey through layers of rich chocolate, tangy raspberries, and the sophisticated notes of fine wine.</p>
+    <p>In our blog, we celebrate the art of gourmet baking and the exquisite pleasure of indulging in a dessert fit for royalty. The Raspberry Chocolate Wine Cake stands as a testament to the harmonious fusion of flavors, blending the intense richness of dark chocolate with the delicate sweetness of raspberries, all heightened by the subtle undertones of your favorite wine.</p>
+    <p>Join us as we uncover the secrets behind crafting this culinary masterpiece. From selecting the finest ingredients to mastering the art of layering and assembly, we'll guide you through each step with precision and elegance. Our recipes are meticulously curated to ensure that every bite is a symphony of flavors, leaving you craving for more.</p>
+    <p>But our blog is not just about recipes; it's about the experience. We'll take you on a journey through the history and cultural significance of the Raspberry Chocolate Wine Cake, exploring its origins and evolution into a symbol of sophistication and indulgence. Discover the stories behind the ingredients, the traditions associated with the cake, and the rituals of pairing it with the perfect wine for a truly unforgettable dining experience.</p>
+    <p>And for those seeking to take their dessert game to the next level, we'll share expert tips on decorating and presentation, transforming your Raspberry Chocolate Wine Cake into a work of art that's as stunning to behold as it is delicious to devour.</p>
+  </div>
+</div>
+
+</body>
+</html>

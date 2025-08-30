@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcode Timer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        background-image: url('images/cool background.png'); /* Adding a cool background image */
+        background-size: cover;
+        background-position: center;
+    }
+    #container {
+        background-color: rgba(255, 255, 255, 0.8); /* Making container slightly transparent */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeIn 1s ease forwards; /* Adding fade-in animation */
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    #barcode {
+        margin-bottom: 20px;
+        border: 3px solid #4CAF50; /* Changing border color */
+        border-radius: 10px; /* Increasing border radius */
+        padding: 15px; /* Increasing padding */
+        background-color: #f9f9f9; /* Adding background color */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+        overflow: hidden; /* Hiding overflow */
+    }
+    #barcode img {
+        width: 350px; /* Increasing image width */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease; /* Adding transition */
+    }
+    #barcode:hover img {
+        transform: scale(1.1); /* Adding hover effect */
+    }
+    #timer {
+        font-size: 24px;
+        color: #4CAF50; /* Changing text color */
+        animation: pulse 1.5s infinite alternate; /* Adding pulse animation */
+    }
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+    #done-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #done-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="barcode">
+        <img src="images/barcode.jpg" alt="Barcode">
+    </div>
+    <div id="timer">Time remaining: 01:00</div>
+    <a href="thankyou.html" id="done-button">Done</a>
+</div>
+<script>
+    var duration = 60; // 1 minute
+    var timerDisplay = document.getElementById('timer');
+
+    function countdown() {
+        var minutes = Math.floor(duration / 60);
+        var seconds = duration % 60;
+        timerDisplay.textContent = "Time remaining: " + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+        if (--duration < 0) {
+            clearInterval(interval);
+            timerDisplay.textContent = "Time's up!";
+        }
+    }
+
+    var interval = setInterval(countdown, 1000);
+</script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcode Timer</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        background-image: url('images/cool\ background.jpg'); /* Adding a cool background image */
+        background-size: cover;
+        background-position: center;
+    }
+    #container {
+        background-color: rgba(255, 255, 255, 0.8); /* Making container slightly transparent */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: fadeIn 1s ease forwards; /* Adding fade-in animation */
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    #barcode {
+        margin-bottom: 20px;
+        border: 3px solid #4CAF50; /* Changing border color */
+        border-radius: 10px; /* Increasing border radius */
+        padding: 15px; /* Increasing padding */
+        background-color: #f9f9f9; /* Adding background color */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+        overflow: hidden; /* Hiding overflow */
+    }
+    #barcode img {
+        width: 350px; /* Increasing image width */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease; /* Adding transition */
+    }
+    #barcode:hover img {
+        transform: scale(1.1); /* Adding hover effect */
+    }
+    #timer {
+        font-size: 24px;
+        color: #4CAF50; /* Changing text color */
+        animation: pulse 1.5s infinite alternate; /* Adding pulse animation */
+    }
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="barcode">
+        <img src="images/barcode.jpg" alt="Barcode">
+    </div>
+    <div id="timer">Time remaining: 01:00</div>
+</div>
+<script>
+    var duration = 60; // 1 minute
+    var timerDisplay = document.getElementById('timer');
+
+    function countdown() {
+        var minutes = Math.floor(duration / 60);
+        var seconds = duration % 60;
+        timerDisplay.textContent = "Time remaining: " + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+        if (--duration < 0) {
+            clearInterval(interval);
+            timerDisplay.textContent = "Time's up!";
+        }
+    }
+
+    var interval = setInterval(countdown, 1000);
+</script>
+</body>
+</html> -->

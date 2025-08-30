@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Stawberry Covered Chocolate with Infusion",
+        "price": 520,
+        "image": "images/deva-williamson-S2jw81lfrG0-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Stawberry Dessert",
+        "price": 890,
+        "image": "images/heather-barnes-hLOLcUwR0Y4-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Butter Milk Donuts",
+        "price": 670,
+        "image": "images/heather-ford-POM4KxWZcG8-unsplash.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "Stawberry Waffle with Blueberries",
+        "price": 750,
+        "image": "images/humphrey-muleba-jABXuTS1azc-unsplash.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Sweet Stawberry French Crepes",
+        "price": 820,
+        "image": "images/joyful-vT5xrj3z1OE-unsplash.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Stawberry Flavoured Cake",
+        "price": 870,
+        "image": "images/massimo-adami-mtut50xOeC4-unsplash.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Dark Chocolate Fudge Brownie",
+        "price": 800,
+        "image": "images/aa4239e32994e18ae91078f7e1a0eacf.png"
+    },
+    {
+        "id": 8,
+        "name": "Dark Chocolate Fudge",
+        "price": 750,
+        "image": "images/classic-dark-chocolate-fudge-40610.png"
+    },
+    {
+        "id": 9,
+        "name": "Classic White",
+        "price": 700,
+        "image": "images/classic-white-cake-mix-75310.webp"
+    }
+]
